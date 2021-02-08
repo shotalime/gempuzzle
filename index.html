@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Пятнашки</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Source+Code+Pro&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header>
+  <div class="logo"><a href="index.html">Игра</a></div>  
+  <div class="nav"><a href="#pop-up-field">Результаты</a></div>
+  
+</header>
+<main>
+  <section class ="game">
+    <div class="counters">
+      <time class="timer">0:00</time> 
+      <span class="step-counter">0</span>
+    </div>
+      
+    <table class="game-box">    
+      <tr class="game-row">
+        <td>1</td> <td>2</td> <td>3</td> <td>4</td>
+      </tr>
+      <tr class="game-row">
+        <td>5</td> <td>6</td> <td>7</td> <td>8</td>
+      </tr>
+      <tr class="game-row"> 
+        <td>9</td> <td>10</td> <td>11</td> <td>12</td>
+      </tr >
+      <tr class="game-row">
+        <td>13</td> <td>14</td> <td>15</td> <td class="empty-cell"> </td>
+      </tr>
+    </table>
+    
+    <div class="buttons">
+      <button type="button" class="button start-button" value="start">Старт</button>
+      <label class="test-start"> Один шаг
+        <input class="test-shuffle" type="checkbox"  id="test-shuffle"> 
+      </label>
+    </div>  
+           
+  </section>
+  <div class="blackout">
+    <div class="container--game-results">
+
+      <div class="form-legend">Сохранить результаты?</div>
+      <form id="game-results">
+        <div class="container--input">
+          <div class="field-label">Введите имя</div> 
+          <input class="input name-input" type="text" name="username" required>
+        </div>
+          
+        <div class="container--input">
+          <div class="field-label">Введите почту</div> 
+          <input class="input name-email" type="text" name="email" required>
+        </div>
+        
+        <input class="button button--submit" type="submit" value="Сохранить">
+        <input class="button button--close" type="button" value="Закрыть">        
+      </form>
+    </div>
+  </div>
+  <a href=# id="pop-up-field">
+    <div class="pop-up-window" id="pop-up-window">
+      <h2>Последние результаты</h2>
+      <div class="recent-results">
+        
+        <table id="results-table"> 
+          <thead>
+            <tr>
+              <th>Имя</th>
+              <th>Почта</th>
+              <th>Время</th>
+              <th>Шаги</th>
+              <th>Дата</th>
+            </tr>           
+          </thead>  
+          <tbody>
+          </tbody>
+        </table> 
+
+        <template id="resultsthrow">
+          <tr>
+            <td class="record"></td>
+            <td class="record"></td>
+            <td class="record"></td>
+            <td class="record"></td>
+            <td class="record"></td>
+          </tr>
+        </template>
+      </div>
+    </div>
+  </a> 
+</main>
+
+<script src="main.js"></script>
+
+</body>
+</html>
